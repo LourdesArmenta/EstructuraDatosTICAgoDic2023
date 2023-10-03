@@ -53,7 +53,7 @@ public class Lista<T> {
 	 *    posición no exista
 	 */
 	public void insertar(T valor, int pos) throws PosicionIlegalException {
-		if (pos>0 && pos<tamanio) {
+		if (pos>=0 && pos<=tamanio) {
 			Nodo<T> nuevo = new Nodo<T>();
 			nuevo.setValor(valor);
 			//el nodo a insertar esta al comienzo
@@ -84,6 +84,7 @@ public class Lista<T> {
 					
 				}
 			}
+			tamanio++;
 			
 		}
 		else {
@@ -101,7 +102,7 @@ public class Lista<T> {
 			else {
 				Nodo<T> aux= cabeza;
 				for(int i=0;i<=pos-1;i++) {
-					aux=aux.getSiguiente()
+					aux=aux.getSiguiente();
 				}
 				valor = aux.getValor();
 			}
