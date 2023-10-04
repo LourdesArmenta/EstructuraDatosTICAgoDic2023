@@ -120,7 +120,7 @@ public class Lista<T> {
 	 * @throws PosicionIlegalException
 	 */
 	public void remover(int pos) throws PosicionIlegalException{
-		if(pos>=0 && pos<=tamanio) {
+		if(pos>=0 && pos<tamanio) {
 			if (pos==0) {
 				//El nodo a eliminar esta en la primera posicion
 				cabeza = cabeza.getSiguiente();
@@ -145,29 +145,5 @@ public class Lista<T> {
 		cabeza = null;
 		tamanio = 0;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }

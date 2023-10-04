@@ -54,10 +54,7 @@ public class ClienteMain {
 			System.out.println("Dato en la posición 1:"+
 			         lista.getValor(1));
 			System.out.println("Dato en la posición 2:"+
-			         lista.getValor(2));
-			
-			
-			
+			         lista.getValor(2));	
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
