@@ -51,6 +51,28 @@ public class Pila<T> {
 		else
 			return null;
 	}
+	/**
+	 * 
+	 * @param elemento
+	 * @return la posición del elemento en la pila si lo encuentra
+	 *         si no regresa -1
+	 */
+	public int buscar(T elemento) {
+		Nodo <T> aux=cabeza;
+		int posicion=0;
+		//Recorre la Pila 
+		while(aux!=null) {
+			
+			if (aux.getValor().equals(elemento)) {
+				//si lo encuentra regresa la posicion
+				return posicion;
+			}
+			aux=aux.getSiguiente();
+			posicion++;
+		}
+			//Si salió por esta parte no lo encontro
+			return -1;
+	}
 	
 	
 	
